@@ -681,6 +681,163 @@ body.cool-page .footer p {
   .sticker-c { display: none; }
 }
 
+/* Featured hero card (AFTERHOURS) */
+.wall-feature {
+  display: block;
+  position: relative;
+  margin: 8px 0 28px;
+  padding: 34px 28px 28px;
+  background:
+    radial-gradient(circle at 82% 22%, rgba(245, 196, 69, 0.12), transparent 45%),
+    linear-gradient(150deg, #1a1a3a 0%, #14162e 55%, #0f1024 100%);
+  color: #f7efdc;
+  border: 2px solid var(--wall-outline);
+  border-radius: 22px;
+  box-shadow: 6px 8px 0 rgba(43, 26, 32, 0.2);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 200ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 200ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wall-feature:hover {
+  transform: translate(-2px, -4px);
+  box-shadow: 8px 12px 0 rgba(43, 26, 32, 0.26);
+}
+
+.wall-feature-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wall-feature-star {
+  position: absolute;
+  color: #f5c445;
+  opacity: 0.6;
+}
+
+.wall-feature-star-a { top: 22px; right: 22%; font-size: 14px; }
+.wall-feature-star-b { top: 40%; right: 12%; font-size: 10px; opacity: 0.45; }
+.wall-feature-star-c { bottom: 22%; left: 8%; font-size: 12px; opacity: 0.5; }
+.wall-feature-star-d { bottom: 30px; right: 35%; font-size: 9px; opacity: 0.4; }
+
+.wall-feature-moon {
+  position: absolute;
+  top: 30px;
+  right: 26px;
+  font-size: 44px;
+  line-height: 1;
+  opacity: 0.85;
+  filter: drop-shadow(0 4px 12px rgba(245, 196, 69, 0.35));
+  transform: rotate(-8deg);
+}
+
+.wall-feature-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #f5c445;
+  color: #14162e;
+  border: 2px solid var(--wall-outline);
+  border-radius: 999px;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.wall-feature-num {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: var(--wall-cream-card);
+  color: var(--wall-ink);
+  border: 2px solid var(--wall-outline);
+  border-radius: 50%;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.wall-feature-eyebrow {
+  font-size: 13px;
+  color: rgba(247, 239, 220, 0.6);
+  padding-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.wall-feature-title {
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(56px, 10vw, 108px);
+  line-height: 0.92;
+  color: #f7efdc;
+  padding: 4px 0 14px;
+  letter-spacing: -0.015em;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.wall-feature-tagline {
+  font-family: 'Fraunces', ui-serif, serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.3;
+  color: #f5c445;
+  padding-bottom: 14px;
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.wall-feature-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(247, 239, 220, 0.85);
+  padding-bottom: 22px;
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.wall-feature-mention {
+  color: #f5c445;
+  font-weight: 600;
+}
+
+.wall-feature-cta {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #f5c445;
+  color: #14162e;
+  border: 2px solid var(--wall-outline);
+  border-radius: 999px;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  position: relative;
+  z-index: 2;
+  box-shadow: 3px 3px 0 rgba(43, 26, 32, 0.25);
+  transition: transform 150ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 150ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wall-feature:hover .wall-feature-cta {
+  transform: translate(-1px, -2px);
+  box-shadow: 5px 5px 0 rgba(43, 26, 32, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wall-feature:hover,
+  .wall-feature:hover .wall-feature-cta { transform: none; }
+}
+
 .wall-marquee {
   margin: 28px -24px 24px;
   padding: 12px 0;
