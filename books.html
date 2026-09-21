@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books · Samarth Joshi</title>
+  <meta name="description" content="What Samarth is reading.">
+  <link rel="icon" type="image/jpeg" href="assets/samarth.jpg">
+  <link rel="apple-touch-icon" href="assets/samarth.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main">
+    <div class="content">
+      <header class="header">
+        <a class="avatar" href="index.html" aria-label="Home">
+          <img src="assets/samarth.jpg" alt="Portrait of Samarth Joshi" onerror="this.onerror=null;this.src='assets/avatar.svg';">
+        </a>
+        <div>
+          <h1>Samarth Joshi</h1>
+          <p>22 &amp; I love to build, surf, and learn new things</p>
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="Section navigation">
+        <a href="index.html">home</a>
+        <span class="sep">-</span>
+        <a href="about.html">about</a>
+        <span class="sep">-</span>
+        <a href="books.html" class="active">books</a>
+        <span class="sep">-</span>
+        <a href="projects.html">projects</a>
+        <span class="sep">-</span>
+        <a href="cool-stuff.html">cool stuff</a>
+      </nav>
+
+      <section class="books-page">
+        <h2>Books</h2>
+        <p class="lede">What&rsquo;s on my shelf right now.</p>
+
+        <div class="book-grid">
+          <figure class="book">
+            <span class="cover">
+              <img src="assets/books/kite-runner.jpg" alt="The Kite Runner by Khaled Hosseini" onerror="this.onerror=null;this.src='assets/books/placeholder.svg';">
+            </span>
+            <figcaption>
+              <span class="title">The Kite Runner</span>
+              <span class="author">Khaled Hosseini</span>
+              <span class="status status-reading">Reading</span>
+            </figcaption>
+          </figure>
+
+          <figure class="book">
+            <span class="cover">
+              <img src="assets/books/thousand-splendid-suns.jpg" alt="A Thousand Splendid Suns by Khaled Hosseini" onerror="this.onerror=null;this.src='assets/books/placeholder.svg';">
+            </span>
+            <figcaption>
+              <span class="title">A Thousand Splendid Suns</span>
+              <span class="author">Khaled Hosseini</span>
+              <span class="status status-next">Next</span>
+            </figcaption>
+          </figure>
+
+          <figure class="book">
+            <span class="cover">
+              <img src="assets/books/psychology-of-money.jpg" alt="The Psychology of Money by Morgan Housel" onerror="this.onerror=null;this.src='assets/books/placeholder.svg';">
+            </span>
+            <figcaption>
+              <span class="title">The Psychology of Money</span>
+              <span class="author">Morgan Housel</span>
+              <span class="status status-read">Read</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>Because <span class="details">details<span class="tooltip">Like this one.</span></span> matter.</p>
+      <p class="clock">India <span id="clock-time">00:00:00</span></p>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var clockEl = document.getElementById('clock-time');
+      var fmt = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      });
+      function tick() { clockEl.textContent = fmt.format(new Date()); }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>

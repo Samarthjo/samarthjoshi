@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samarth Joshi · Builder</title>
+  <meta name="description" content="Samarth Joshi is a 22 year old based in India who loves to build, surf, and learn new things.">
+  <link rel="canonical" href="/">
+  <meta property="og:title" content="Samarth Joshi · Builder">
+  <meta property="og:description" content="Samarth Joshi is a 22 year old based in India who loves to build, surf, and learn new things.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Samarth Joshi",
+    "alternateName": "Samarth",
+    "description": "22 year old based in India. Loves to build, surf, and learn new things.",
+    "email": "mailto:samarth.joshi2004@gmail.com",
+    "homeLocation": { "@type": "Place", "name": "India" },
+    "nationality": { "@type": "Country", "name": "India" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Christ University" },
+    "sameAs": [
+      "https://github.com/Samarthjo",
+      "https://x.com/SamarthJoshiSJ",
+      "https://www.linkedin.com/in/samarth-joshi05/",
+      "https://www.instagram.com/randomviewsof21yearold"
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/jpeg" href="assets/samarth.jpg">
+  <link rel="apple-touch-icon" href="assets/samarth.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main">
+    <div class="content">
+      <header class="header">
+        <a class="avatar" href="index.html" aria-label="Home">
+          <img src="assets/samarth.jpg" alt="Portrait of Samarth Joshi" onerror="this.onerror=null;this.src='assets/avatar.svg';">
+        </a>
+        <div>
+          <h1>Samarth Joshi</h1>
+          <p>22 &amp; I love to build, surf, and learn new things</p>
+        </div>
+      </header>
+
+      <section class="intro">
+        <p>I like it when the small details in a product feel intentional&mdash;the layout, the interactions, the way it reads.</p>
+        <p>My most recent project is <a href="https://www.brandmyasus.in/" target="_blank" rel="noopener">brandmyasus</a>. If you want to work together, <a href="mailto:samarth.joshi2004@gmail.com">email me</a>. Otherwise, find me on <a href="https://x.com/SamarthJoshiSJ" target="_blank" rel="noopener">X</a>, <a href="https://github.com/Samarthjo" target="_blank" rel="noopener">GitHub</a>, or <a href="https://www.linkedin.com/in/samarth-joshi05/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+      </section>
+
+      <nav class="tabs" aria-label="Section navigation">
+        <a href="index.html" class="active">home</a>
+        <span class="sep">-</span>
+        <a href="about.html">about</a>
+        <span class="sep">-</span>
+        <a href="books.html">books</a>
+        <span class="sep">-</span>
+        <a href="projects.html">projects</a>
+        <span class="sep">-</span>
+        <a href="cool-stuff.html">cool stuff</a>
+      </nav>
+    </div>
+
+    <footer class="footer">
+      <p>Because <span class="details">details<span class="tooltip">Like this one.</span></span> matter.</p>
+      <p class="clock">India <span id="clock-time">00:00:00</span></p>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var clockEl = document.getElementById('clock-time');
+      var fmt = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      });
+      function tick() { clockEl.textContent = fmt.format(new Date()); }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>

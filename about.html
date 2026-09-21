@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Samarth Joshi</title>
+  <meta name="description" content="More about Samarth Joshi.">
+  <link rel="icon" type="image/jpeg" href="assets/samarth.jpg">
+  <link rel="apple-touch-icon" href="assets/samarth.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main">
+    <div class="content">
+      <header class="header">
+        <a class="avatar" href="index.html" aria-label="Home">
+          <img src="assets/samarth.jpg" alt="Portrait of Samarth Joshi" onerror="this.onerror=null;this.src='assets/avatar.svg';">
+        </a>
+        <div>
+          <h1>Samarth Joshi</h1>
+          <p>22 &amp; I love to build, surf, and learn new things</p>
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="Section navigation">
+        <a href="index.html">home</a>
+        <span class="sep">-</span>
+        <a href="about.html" class="active">about</a>
+        <span class="sep">-</span>
+        <a href="books.html">books</a>
+        <span class="sep">-</span>
+        <a href="projects.html">projects</a>
+        <span class="sep">-</span>
+        <a href="cool-stuff.html">cool stuff</a>
+      </nav>
+
+      <section class="about">
+        <h2>More about me</h2>
+        <p>I&rsquo;m the kind of person who gets curious about everything&mdash;how something works, why it was built that way, what would happen if you swapped a piece out. Lately most of that curiosity is aimed at AI tools; I love pulling them apart, prompting them into corners, and figuring out where they actually help versus where they just sound clever.</p>
+        <p>On the creative side, I dabble in video editing and graphic design. Most of that lives on my personal Instagram &mdash; <a href="https://www.instagram.com/randomviewsof21yearold?igsi=MXc3N21tY2IzOXdkMA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">@randomviewsof21yearold</a>.</p>
+        <p>Before all this, at 17, I was a part-time Twitch streamer&mdash;Fortnite, Valorant, Rocket League, whatever was fun that week. I also moderated a US streamer&rsquo;s channel for about a year, which is where I first learned how communities really run behind the scenes.</p>
+        <p>I finished my Bachelor&rsquo;s in Business Management at Christ University in 2025 while juggling all of this. It gave me the foundation, the friendships, and a bit of polish to go with it.</p>
+
+        <p class="resume-line"><a href="assets/samarth-resume.pdf" target="_blank" rel="noopener">Resume</a></p>
+
+        <p>Honestly, I&rsquo;m just figuring things out as I go.</p>
+        <p>Building stuff, breaking stuff, fixing stuff, and picking up lessons along the way.</p>
+        <p>Still experimenting. Still having fun :)</p>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>Because <span class="details">details<span class="tooltip">Like this one.</span></span> matter.</p>
+      <p class="clock">India <span id="clock-time">00:00:00</span></p>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var clockEl = document.getElementById('clock-time');
+      var fmt = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      });
+      function tick() { clockEl.textContent = fmt.format(new Date()); }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>

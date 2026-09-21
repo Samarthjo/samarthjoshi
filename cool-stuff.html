@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Stuff · Samarth Joshi</title>
+  <meta name="description" content="Cool stuff by Samarth Joshi.">
+  <link rel="icon" type="image/jpeg" href="assets/samarth.jpg">
+  <link rel="apple-touch-icon" href="assets/samarth.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main">
+    <div class="content">
+      <header class="header">
+        <a class="avatar" href="index.html" aria-label="Home">
+          <img src="assets/samarth.jpg" alt="Portrait of Samarth Joshi" onerror="this.onerror=null;this.src='assets/avatar.svg';">
+        </a>
+        <div>
+          <h1>Samarth Joshi</h1>
+          <p>22 &amp; I love to build, surf, and learn new things</p>
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="Section navigation">
+        <a href="index.html">home</a>
+        <span class="sep">-</span>
+        <a href="about.html">about</a>
+        <span class="sep">-</span>
+        <a href="books.html">books</a>
+        <span class="sep">-</span>
+        <a href="projects.html">projects</a>
+        <span class="sep">-</span>
+        <a href="cool-stuff.html" class="active">cool stuff</a>
+      </nav>
+
+      <section class="empty">
+        <h2>Cool stuff</h2>
+        <p>Coming soon.</p>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>Because <span class="details">details<span class="tooltip">Like this one.</span></span> matter.</p>
+      <p class="clock">India <span id="clock-time">00:00:00</span></p>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var clockEl = document.getElementById('clock-time');
+      var fmt = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      });
+      function tick() { clockEl.textContent = fmt.format(new Date()); }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
