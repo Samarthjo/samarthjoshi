@@ -335,6 +335,105 @@ div.row {
   color: rgba(0, 0, 0, 0.45);
 }
 
+/* Cool stuff feed */
+.cool h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  line-height: 21.7px;
+  letter-spacing: -0.15px;
+  padding-bottom: 6px;
+}
+
+.cool .lede {
+  color: rgba(0, 0, 0, 0.45);
+  padding-bottom: 24px;
+}
+
+.cool .post {
+  padding-top: 20px;
+  padding-bottom: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cool .post:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cool .post-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+
+.cool .post-head h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  line-height: 21.7px;
+  letter-spacing: -0.15px;
+}
+
+.cool .post-head time {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.35);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.cool .post-body p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cool .post-body p + p {
+  padding-top: 8px;
+}
+
+.cool .post-media {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.cool .post-media figure {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f2f0ec;
+  aspect-ratio: 4 / 5;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.cool .post-media img,
+.cool .post-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cool .post-media .post-video {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.cool .post-media .post-video video {
+  object-fit: contain;
+  background: #000;
+}
+
+@media (max-width: 520px) {
+  .cool .post-media {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Books page */
 .books-page h2 {
   font-size: 14px;
