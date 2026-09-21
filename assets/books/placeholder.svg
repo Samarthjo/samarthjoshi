@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300" role="img" aria-label="Book cover placeholder">
+  <rect width="200" height="300" fill="#f2f0ec"/>
+  <rect x="24" y="24" width="152" height="252" fill="none" stroke="#d9d5cc" stroke-width="2"/>
+  <text x="100" y="160" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="13" fill="#8a8578">Cover</text>
+</svg>
