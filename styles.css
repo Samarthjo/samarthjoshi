@@ -83,6 +83,11 @@ body {
   color: rgba(0, 0, 0, 0.45);
 }
 
+.header .role-line {
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 500;
+}
+
 .intro p {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -103,6 +108,10 @@ a:hover {
   color: var(--accent-hover);
 }
 
+.work + .work {
+  padding-top: 34px;
+}
+
 .work h2 {
   font-size: 14px;
   font-weight: 600;
@@ -118,6 +127,7 @@ a:hover {
 
 .work li {
   transition: opacity var(--duration-fast) var(--ease-out);
+  padding: 11px 0;
 }
 
 .work ul:has(a.row:hover) li {
@@ -132,7 +142,6 @@ a:hover {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  padding: 11px 0;
   white-space: nowrap;
   text-decoration: none;
   color: inherit;
@@ -142,11 +151,11 @@ div.row {
   cursor: default;
 }
 
-.work li + li .row {
+.work li + li {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.work li:last-child .row {
+.work li:last-child {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -171,6 +180,18 @@ div.row {
   color: rgba(0, 0, 0, 0.25);
   margin-left: auto;
   flex-shrink: 0;
+}
+
+.work .proj-desc {
+  color: rgba(0, 0, 0, 0.55);
+  padding-top: 6px;
+  font-size: 13px;
+  line-height: 20px;
+  white-space: normal;
+}
+
+.work .proj-desc + .proj-desc {
+  padding-top: 4px;
 }
 
 .footer {
