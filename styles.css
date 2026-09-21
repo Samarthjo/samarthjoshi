@@ -109,7 +109,7 @@ a:hover {
 }
 
 .work + .work {
-  padding-top: 34px;
+  margin-top: -18px;
 }
 
 .work h2 {
