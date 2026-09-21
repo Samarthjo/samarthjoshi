@@ -29,7 +29,37 @@ body {
   padding: 57px 24px 40px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+
+/* Theme toggle */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.45);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: color var(--duration-instant) var(--ease-out), background var(--duration-instant) var(--ease-out);
+  z-index: 5;
+}
+
+.theme-toggle:hover {
+  color: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.theme-toggle svg { display: block; }
+.theme-toggle .theme-icon-sun { display: none; }
+
+:root[data-theme="dark"] .theme-toggle .theme-icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .theme-icon-sun { display: block; }
 
 .content {
   display: flex;
@@ -118,7 +148,12 @@ a:hover {
   color: #000;
   line-height: 21.7px;
   letter-spacing: -0.15px;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
+}
+
+.work .lede {
+  color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 18px;
 }
 
 .work ul {
@@ -884,6 +919,127 @@ body.cool-page .wall-card--feature:hover .handle {
   body.cool-page .wall-card--feature .wall-card-imgs {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* =========================
+   Dark mode
+   ========================= */
+
+:root[data-theme="dark"] body {
+  background: #0e0e10;
+  color: rgba(245, 240, 226, 0.6);
+}
+
+:root[data-theme="dark"] .header h1 { color: #f5f0e2; }
+:root[data-theme="dark"] .header p { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] .header .role-line { color: rgba(245, 240, 226, 0.7); }
+
+:root[data-theme="dark"] .tabs a { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] .tabs a:hover { color: #f5f0e2; }
+:root[data-theme="dark"] .tabs a.active { color: #ff9558; }
+:root[data-theme="dark"] .tabs .sep { color: rgba(245, 240, 226, 0.3); }
+
+:root[data-theme="dark"] .intro p { color: rgba(245, 240, 226, 0.75); }
+
+:root[data-theme="dark"] a { color: #74baff; }
+:root[data-theme="dark"] a:hover { color: #a7d3ff; }
+
+:root[data-theme="dark"] .work h2 { color: #f5f0e2; }
+:root[data-theme="dark"] .work .lede { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] .work .company { color: #f5f0e2; }
+:root[data-theme="dark"] .work .role { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] .work .period { color: rgba(245, 240, 226, 0.35); }
+:root[data-theme="dark"] .work li + li { border-top-color: rgba(245, 240, 226, 0.1); }
+:root[data-theme="dark"] .work li:last-child { border-bottom-color: rgba(245, 240, 226, 0.1); }
+:root[data-theme="dark"] .work .row-desc,
+:root[data-theme="dark"] .work .proj-desc { color: rgba(245, 240, 226, 0.55); }
+
+:root[data-theme="dark"] .about h2 { color: #f5f0e2; }
+:root[data-theme="dark"] .about p { color: rgba(245, 240, 226, 0.75); }
+:root[data-theme="dark"] .about .mini-h { color: #f5f0e2; }
+
+:root[data-theme="dark"] .empty h2 { color: #f5f0e2; }
+:root[data-theme="dark"] .empty p { color: rgba(245, 240, 226, 0.6); }
+
+:root[data-theme="dark"] .books-page h2 { color: #f5f0e2; }
+:root[data-theme="dark"] .books-page .lede { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] .book .cover {
+  background: #1c1c1f;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+:root[data-theme="dark"] .book .title { color: #f5f0e2; }
+:root[data-theme="dark"] .book .author { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] .book .status {
+  color: rgba(245, 240, 226, 0.6);
+  background: rgba(245, 240, 226, 0.08);
+}
+:root[data-theme="dark"] .book .status-reading {
+  color: #ff9558;
+  background: rgba(255, 149, 88, 0.14);
+}
+:root[data-theme="dark"] .book .status-next {
+  color: #f5c445;
+  background: rgba(245, 196, 69, 0.14);
+}
+:root[data-theme="dark"] .book .status-read {
+  color: rgba(245, 240, 226, 0.5);
+  background: rgba(245, 240, 226, 0.06);
+}
+
+:root[data-theme="dark"] .footer p { color: rgba(245, 240, 226, 0.35); }
+:root[data-theme="dark"] .footer .details:hover { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] .footer .tooltip {
+  background: #1c1c1f;
+  border-color: rgba(245, 240, 226, 0.12);
+  color: rgba(245, 240, 226, 0.55);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="dark"] .theme-toggle { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] .theme-toggle:hover {
+  color: #f5f0e2;
+  background: rgba(245, 240, 226, 0.06);
+}
+
+/* Wall page in dark mode: deepen background, keep the sticker cards popping */
+:root[data-theme="dark"] body.cool-page {
+  background: #0a0a0c;
+  color: rgba(245, 240, 226, 0.65);
+  background-image: radial-gradient(rgba(245, 240, 226, 0.04) 1px, transparent 1px);
+}
+:root[data-theme="dark"] body.cool-page .header h1 { color: #f5f0e2; }
+:root[data-theme="dark"] body.cool-page .header p { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] body.cool-page .header .role-line { color: rgba(245, 240, 226, 0.7); }
+:root[data-theme="dark"] body.cool-page .tabs a { color: rgba(245, 240, 226, 0.55); }
+:root[data-theme="dark"] body.cool-page .tabs a:hover { color: #f5f0e2; }
+:root[data-theme="dark"] body.cool-page .tabs a.active { color: #ff9558; }
+:root[data-theme="dark"] body.cool-page .tabs .sep { color: rgba(245, 240, 226, 0.3); }
+:root[data-theme="dark"] body.cool-page .footer p { color: rgba(245, 240, 226, 0.4); }
+:root[data-theme="dark"] body.cool-page .theme-toggle { color: rgba(245, 240, 226, 0.55); }
+
+:root[data-theme="dark"] .wall-title {
+  color: #f5f0e2;
+  text-shadow: 4px 4px 0 rgba(245, 240, 226, 0.06);
+}
+:root[data-theme="dark"] .wall-lede { color: rgba(245, 240, 226, 0.6); }
+:root[data-theme="dark"] .wall-sparkle { color: rgba(245, 240, 226, 0.5); }
+:root[data-theme="dark"] .wall-count {
+  background: #1a1a1e;
+  color: #f5f0e2;
+  border-color: rgba(245, 240, 226, 0.35);
+}
+:root[data-theme="dark"] .wall-outro { color: rgba(245, 240, 226, 0.55); }
+
+:root[data-theme="dark"] .wall-card {
+  border-color: rgba(245, 240, 226, 0.35);
+  box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.45);
+}
+:root[data-theme="dark"] .wall-card:hover {
+  box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.55);
+}
+:root[data-theme="dark"] .wall-card-num,
+:root[data-theme="dark"] .wall-card-foot .handle {
+  border-color: rgba(245, 240, 226, 0.35);
 }
 
 .wall-card-date {
