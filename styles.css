@@ -428,6 +428,11 @@ div.row {
   background: #000;
 }
 
+.cool .post-media:not(:has(.post-video)) figure:nth-child(3):last-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 10;
+}
+
 @media (max-width: 520px) {
   .cool .post-media {
     grid-template-columns: 1fr;
