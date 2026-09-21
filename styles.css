@@ -553,3 +553,366 @@ div.row {
     scroll-behavior: auto !important;
   }
 }
+
+/* =========================
+   The wall (cool-stuff page)
+   ========================= */
+
+:root {
+  --wall-cream: #f5eee0;
+  --wall-ink: #2b1a20;
+  --wall-ink-soft: #6d5a5f;
+  --wall-outline: #2b1a20;
+  --wall-pink: #f8c8d5;
+  --wall-yellow: #f5c445;
+  --wall-teal: #b8ecd8;
+  --wall-peach: #fce6c9;
+  --wall-green: #2e6a55;
+  --wall-cream-card: #fffbf0;
+  --wall-hot: #e13f7a;
+}
+
+body.cool-page {
+  background: var(--wall-cream);
+  color: var(--wall-ink);
+  background-image:
+    radial-gradient(rgba(43, 26, 32, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+body.cool-page .main {
+  max-width: 960px;
+}
+
+body.cool-page .header h1,
+body.cool-page .header p,
+body.cool-page .header .role-line,
+body.cool-page .tabs a,
+body.cool-page .tabs .sep,
+body.cool-page .footer p {
+  color: var(--wall-ink);
+}
+
+body.cool-page .header p {
+  color: rgba(43, 26, 32, 0.6);
+}
+
+body.cool-page .header .role-line {
+  color: rgba(43, 26, 32, 0.7);
+}
+
+body.cool-page .tabs a {
+  color: rgba(43, 26, 32, 0.65);
+}
+
+body.cool-page .tabs a:hover {
+  color: var(--wall-ink);
+}
+
+body.cool-page .tabs a.active {
+  color: var(--wall-hot);
+}
+
+body.cool-page .footer p {
+  color: rgba(43, 26, 32, 0.5);
+}
+
+.wall {
+  padding-top: 8px;
+}
+
+.wall-hero {
+  position: relative;
+  text-align: center;
+  padding: 40px 0 24px;
+}
+
+.wall-title {
+  font-family: 'Bagel Fat One', 'Fraunces', ui-serif, serif;
+  font-weight: 400;
+  font-size: clamp(64px, 12vw, 128px);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--wall-ink);
+  text-shadow: 4px 4px 0 rgba(43, 26, 32, 0.08);
+}
+
+.wall-lede {
+  max-width: 480px;
+  margin: 14px auto 0;
+  color: var(--wall-ink-soft);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.wall-sparkle {
+  position: absolute;
+  font-size: 20px;
+  color: var(--wall-ink);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.wall-sparkle-a { top: 24px; left: 8%; font-size: 24px; }
+.wall-sparkle-b { top: 12%; right: 6%; font-size: 18px; }
+.wall-sparkle-c { bottom: 24px; left: 12%; font-size: 16px; }
+
+.sticker {
+  position: absolute;
+  padding: 6px 12px;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--wall-ink);
+  background: #fff;
+  border: 2px solid var(--wall-outline);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 rgba(43, 26, 32, 0.15);
+  white-space: nowrap;
+}
+
+.sticker-a { top: 4px; left: 6%; background: var(--wall-peach); transform: rotate(-6deg); }
+.sticker-b { top: 40px; right: 8%; background: var(--wall-teal); transform: rotate(5deg); }
+.sticker-c { bottom: 12px; right: 14%; background: var(--wall-pink); transform: rotate(-3deg); }
+
+@media (max-width: 640px) {
+  .sticker-b { top: 8px; right: 4%; }
+  .sticker-c { display: none; }
+}
+
+.wall-marquee {
+  margin: 28px -24px 24px;
+  padding: 12px 0;
+  background: var(--wall-yellow);
+  border-top: 2px solid var(--wall-outline);
+  border-bottom: 2px solid var(--wall-outline);
+  overflow: hidden;
+  transform: rotate(-1.2deg);
+}
+
+.wall-marquee-track {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: wall-marquee 28s linear infinite;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: 20px;
+  color: var(--wall-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wall-marquee-track span {
+  flex-shrink: 0;
+  padding-right: 8px;
+}
+
+@keyframes wall-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.wall-count-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 24px;
+}
+
+.wall-count {
+  padding: 6px 16px;
+  background: #fff;
+  border: 2px solid var(--wall-outline);
+  border-radius: 999px;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--wall-ink);
+}
+
+.wall-grid {
+  column-gap: 20px;
+  column-count: 1;
+}
+
+@media (min-width: 640px) {
+  .wall-grid { column-count: 2; }
+}
+
+@media (min-width: 900px) {
+  .wall-grid { column-count: 3; }
+}
+
+.wall-card {
+  break-inside: avoid;
+  position: relative;
+  margin: 18px 0;
+  padding: 22px 20px 18px;
+  border: 2px solid var(--wall-outline);
+  border-radius: 18px;
+  box-shadow: 4px 5px 0 rgba(43, 26, 32, 0.16);
+  color: var(--wall-ink);
+  transition: transform 180ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 180ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wall-card:hover {
+  transform: translate(-1px, -3px) rotate(-0.4deg);
+  box-shadow: 6px 8px 0 rgba(43, 26, 32, 0.2);
+}
+
+.wall-card--pink   { background: var(--wall-pink); }
+.wall-card--yellow { background: var(--wall-yellow); }
+.wall-card--teal   { background: var(--wall-teal); }
+.wall-card--peach  { background: var(--wall-peach); }
+.wall-card--cream  { background: var(--wall-cream-card); }
+.wall-card--green  { background: var(--wall-green); color: #f5efe0; }
+
+.wall-card--green .wall-card-eyebrow,
+.wall-card--green p { color: #f5efe0; }
+
+.wall-card-date {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  padding: 4px 12px;
+  background: var(--wall-cream-card);
+  border: 2px solid var(--wall-outline);
+  border-radius: 999px;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--wall-ink);
+  z-index: 2;
+}
+
+.wall-card-num {
+  position: absolute;
+  top: -14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: var(--wall-cream-card);
+  border: 2px solid var(--wall-outline);
+  border-radius: 50%;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: 12px;
+  color: var(--wall-ink);
+  z-index: 2;
+}
+
+.wall-card-eyebrow {
+  font-size: 12px;
+  color: rgba(43, 26, 32, 0.6);
+  letter-spacing: 0.02em;
+  padding-top: 6px;
+}
+
+.wall-card h3 {
+  font-family: 'Bagel Fat One', 'Fraunces', ui-serif, serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.1;
+  color: inherit;
+  padding: 4px 0 12px;
+  letter-spacing: -0.005em;
+}
+
+.wall-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(43, 26, 32, 0.82);
+}
+
+.wall-card p a {
+  color: var(--wall-hot);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.wall-card--green p a { color: #f7c3d4; }
+
+.wall-card p a:hover { opacity: 0.85; }
+
+.wall-card-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.wall-card-imgs img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border: 2px solid var(--wall-outline);
+  border-radius: 8px;
+  background: var(--wall-cream-card);
+}
+
+.wall-card-imgs img:nth-child(3):last-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 10;
+}
+
+.wall-card-imgs--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.wall-card-imgs--2 img {
+  aspect-ratio: 4 / 3;
+}
+
+.wall-dashed {
+  border: none;
+  border-top: 2px dashed rgba(43, 26, 32, 0.35);
+  margin: 14px 0 12px;
+}
+
+.wall-card--green .wall-dashed {
+  border-top-color: rgba(245, 239, 224, 0.4);
+}
+
+.wall-card-foot {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wall-card-foot .handle {
+  padding: 4px 12px;
+  background: var(--wall-cream-card);
+  border: 2px solid var(--wall-outline);
+  border-radius: 999px;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: 11px;
+  color: var(--wall-ink);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 150ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wall-card-foot .handle:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 rgba(43, 26, 32, 0.2);
+}
+
+.wall-outro {
+  text-align: center;
+  margin: 34px 0 8px;
+  color: var(--wall-ink-soft);
+  font-size: 14px;
+}
+
+.wall-outro a {
+  color: var(--wall-hot);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wall-marquee-track { animation: none; }
+  .wall-card:hover { transform: none; }
+}
