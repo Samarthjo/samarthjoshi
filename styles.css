@@ -769,94 +769,121 @@ body.cool-page .footer p {
 .wall-card--green .wall-card-eyebrow,
 .wall-card--green p { color: #f5efe0; }
 
-/* Featured build card (AFTERHOURS) — same card grammar, dark night theme */
-.wall-card--feature {
+/* Featured build card (AFTERHOURS) — full-width in the grid, Midnight Moonshot palette */
+body.cool-page .wall-card--feature {
+  column-span: all;
   display: block;
   text-decoration: none;
-  color: #f7efdc;
+  color: #f5f0e2;
   background:
-    radial-gradient(circle at 82% 18%, rgba(245, 196, 69, 0.14), transparent 42%),
-    linear-gradient(150deg, #1e1e42 0%, #14162e 55%, #0f1024 100%);
-  padding: 26px 22px 20px;
-  box-shadow: 5px 6px 0 rgba(43, 26, 32, 0.22);
+    radial-gradient(ellipse 90% 55% at 50% 108%, rgba(74, 222, 128, 0.42) 0%, rgba(74, 222, 128, 0.12) 40%, transparent 62%),
+    radial-gradient(circle at 16% 18%, rgba(74, 222, 128, 0.08), transparent 42%),
+    linear-gradient(180deg, #05050a 0%, #070a08 100%);
+  padding: 38px 30px 30px;
+  box-shadow: 6px 8px 0 rgba(43, 26, 32, 0.26);
   position: relative;
   overflow: hidden;
+  min-height: 320px;
 }
 
-.wall-card--feature:hover {
-  color: #f7efdc;
-}
+body.cool-page .wall-card--feature:hover { color: #f5f0e2; }
 
-.wall-card--feature::before,
-.wall-card--feature::after {
+body.cool-page .wall-card--feature::before,
+body.cool-page .wall-card--feature::after {
   content: "\2726";
   position: absolute;
-  color: #f5c445;
-  opacity: 0.45;
+  color: #4ade80;
+  opacity: 0.55;
   pointer-events: none;
 }
 
-.wall-card--feature::before { top: 40px; right: 18px; font-size: 12px; }
-.wall-card--feature::after  { bottom: 96px; left: 14px; font-size: 10px; }
+body.cool-page .wall-card--feature::before { top: 60px; right: 22px; font-size: 14px; }
+body.cool-page .wall-card--feature::after  { bottom: 110px; left: 18px; font-size: 11px; }
 
-.wall-card--feature .wall-card-num {
-  background: #f5c445;
-  color: #14162e;
-  font-size: 16px;
+body.cool-page .wall-card--feature .wall-card-num {
+  background: #4ade80;
+  color: #05050a;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
 }
 
-.wall-card--feature .wall-card-eyebrow {
-  color: rgba(247, 239, 220, 0.6);
+body.cool-page .wall-card--feature .wall-card-eyebrow {
+  color: rgba(245, 240, 226, 0.65);
   padding-top: 8px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.wall-card--feature h3 {
-  color: #f7efdc;
-  font-size: 30px;
-  letter-spacing: -0.01em;
-  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.28);
+body.cool-page .wall-card--feature h3 {
+  color: #ffffff;
+  font-family: 'Bagel Fat One', system-ui, sans-serif;
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  padding: 6px 0 12px;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
-.wall-card--feature .wall-card-tagline {
+body.cool-page .wall-card--feature .wall-card-tagline {
   font-family: 'Fraunces', ui-serif, serif;
+  font-style: italic;
   font-weight: 700;
+  font-size: clamp(20px, 2.6vw, 28px);
+  line-height: 1.25;
+  color: #4ade80;
+  padding-bottom: 14px;
+  max-width: 640px;
+}
+
+body.cool-page .wall-card--feature p {
+  color: rgba(245, 240, 226, 0.9);
   font-size: 15px;
-  line-height: 1.35;
-  color: #f5c445;
-  padding-bottom: 10px;
+  line-height: 1.6;
+  max-width: 640px;
 }
 
-.wall-card--feature p {
-  color: rgba(247, 239, 220, 0.85);
-  font-size: 14px;
-  line-height: 1.55;
-}
-
-.wall-card--feature .wall-mention {
-  color: #f5c445;
+body.cool-page .wall-card--feature .wall-mention {
+  color: #4ade80;
   font-weight: 600;
 }
 
-.wall-card--feature .wall-card-imgs img {
-  border-color: rgba(247, 239, 220, 0.85);
-  background: #14162e;
+body.cool-page .wall-card--feature .wall-card-imgs {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 20px;
 }
 
-.wall-card--feature .wall-dashed {
-  border-top-color: rgba(247, 239, 220, 0.28);
+body.cool-page .wall-card--feature .wall-card-imgs img {
+  border-color: rgba(245, 240, 226, 0.9);
+  background: #0a0d0b;
+  aspect-ratio: 1 / 1;
 }
 
-.wall-card--feature .wall-card-foot .handle {
-  background: #f5c445;
-  color: #14162e;
-  font-size: 12px;
-  padding: 6px 14px;
-  box-shadow: 2px 2px 0 rgba(43, 26, 32, 0.25);
+body.cool-page .wall-card--feature .wall-dashed {
+  border-top-color: rgba(245, 240, 226, 0.25);
+  margin-top: 18px;
 }
 
-.wall-card--feature:hover .handle {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 rgba(43, 26, 32, 0.3);
+body.cool-page .wall-card--feature .wall-card-foot .handle {
+  background: #4ade80;
+  color: #05050a;
+  font-size: 13px;
+  padding: 8px 16px;
+  box-shadow: 2px 2px 0 rgba(43, 26, 32, 0.3);
+}
+
+body.cool-page .wall-card--feature:hover .handle {
+  transform: translate(-1px, -2px);
+  box-shadow: 4px 4px 0 rgba(43, 26, 32, 0.35);
+}
+
+@media (max-width: 640px) {
+  body.cool-page .wall-card--feature { padding: 32px 22px 24px; }
+  body.cool-page .wall-card--feature .wall-card-imgs {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .wall-card-date {
